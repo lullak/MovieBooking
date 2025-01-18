@@ -30,7 +30,7 @@ const BookingForm: React.FC = () => {
 
     await axios.put(`/movies/${selectedMovie.id}`, updatedMovie);
 
-    navigate("/");
+    navigate("/moviebooking");
   };
 
   const totalAmount = selectedSeats.length * selectedMovie.ticketPrice;

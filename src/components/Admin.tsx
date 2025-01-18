@@ -129,7 +129,7 @@ const Admin: React.FC = () => {
           </li>
         ))}
       </ul>
-      <button className="btn" onClick={() => navigate("/")}>
+      <button className="btn" onClick={() => navigate("/moviebooking")}>
         Back to Booking
       </button>
     </div>
