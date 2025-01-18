@@ -3,7 +3,7 @@ import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BookingFormProps } from "./Types";
 
-const BookingForm: React.FC<BookingFormProps> = () => {
+const BookingForm: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { selectedSeats, selectedMovie } = location.state as BookingFormProps;
@@ -18,7 +18,6 @@ const BookingForm: React.FC<BookingFormProps> = () => {
       return;
     }
 
-    // Update the movie seats in the database
     const updatedMovie = {
       ...selectedMovie,
       seats: {
@@ -31,7 +30,6 @@ const BookingForm: React.FC<BookingFormProps> = () => {
 
     await axios.put(`/movies/${selectedMovie.id}`, updatedMovie);
 
-    // Navigate back to the booking page
     navigate("/");
   };
 
