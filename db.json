@@ -1074,7 +1074,7 @@
     {
       "id": "10",
       "name": "The Shawshank Redemption",
-      "ticketPrice": 125,
+      "ticketPrice": 124,
       "seats": {
         "occupied": [
           1,
