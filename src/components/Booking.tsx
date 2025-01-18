@@ -105,9 +105,9 @@ export const Booking: React.FC = () => {
       </div>
       <p className="text">
         You have selected <span id="count">{selectedSeats.length}</span> seats
-        for a price of $
+        for a price of{" "}
         <span id="total">
-          {selectedSeats.length * (selectedMovie?.ticketPrice || 0)}
+          {selectedSeats.length * (selectedMovie?.ticketPrice || 0)} SEK.
         </span>
       </p>
       {selectedSeats.length > 0 && (

@@ -40,7 +40,7 @@ const BookingForm: React.FC = () => {
       <h2>Booking Confirmation</h2>
       <p>
         You have selected {selectedSeats.length} seats for a total amount of{" "}
-        {totalAmount} kr.
+        {totalAmount} SEK.
       </p>
       <form onSubmit={handleSubmit}>
         <div>
