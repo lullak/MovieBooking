@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Booking />} />
+        <Route path="/moviebooking" element={<Booking />} />
         <Route path="/booking-form" element={<BookingForm />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
