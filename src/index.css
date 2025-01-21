@@ -138,3 +138,7 @@ p.text span {
   margin: 00px 5px;
   padding: 0px 2px;
 }
+
+.float-right {
+  float: right;
+}

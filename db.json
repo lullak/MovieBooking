@@ -44,7 +44,13 @@
           100,
           99,
           47,
-          65
+          65,
+          90,
+          91,
+          72,
+          73,
+          55,
+          54
         ],
         "unoccupied": [
           21,
@@ -76,8 +82,6 @@
           51,
           52,
           53,
-          54,
-          55,
           56,
           58,
           59,
@@ -91,8 +95,6 @@
           69,
           70,
           71,
-          72,
-          73,
           74,
           76,
           78,
@@ -105,8 +107,6 @@
           87,
           88,
           89,
-          90,
-          91,
           92,
           93,
           94,
@@ -145,7 +145,9 @@
           34,
           36,
           38,
-          40
+          40,
+          107,
+          106
         ],
         "unoccupied": [
           1,
@@ -232,9 +234,7 @@
           102,
           103,
           104,
-          105,
-          106,
-          107
+          105
         ]
       }
     },
@@ -386,7 +386,9 @@
           20,
           64,
           63,
-          76
+          76,
+          98,
+          99
         ],
         "unoccupied": [
           21,
@@ -463,8 +465,6 @@
           95,
           96,
           97,
-          98,
-          99,
           100,
           101,
           102,
@@ -1308,6 +1308,88 @@
           107
         ]
       }
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "userName": "Harry Potter",
+      "phoneNumber": 125123123,
+      "movieName": "Inception",
+      "seatNumber": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "2",
+      "userName": "Ron Weasley",
+      "phoneNumber": 125123123,
+      "movieName": "Inception",
+      "seatNumber": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "6cb1",
+      "userName": "hej",
+      "phoneNumber": 123,
+      "movieName": "Inception",
+      "seatNumbers": [
+        90,
+        91
+      ]
+    },
+    {
+      "id": "c9c8",
+      "userName": "hej",
+      "phoneNumber": 321,
+      "movieName": "Inception",
+      "seatNumbers": [
+        72,
+        73
+      ]
+    },
+    {
+      "id": "e898",
+      "userName": "wef",
+      "phoneNumber": 1231123123,
+      "movieName": "Inception",
+      "seatNumbers": [
+        55,
+        54
+      ]
+    },
+    {
+      "id": "cfbf",
+      "userName": "afwdf",
+      "phoneNumber": 1231232131,
+      "movieName": "Avatar",
+      "seatNumbers": [
+        98,
+        99
+      ]
+    },
+    {
+      "id": "f27c",
+      "userName": "wfewfew",
+      "phoneNumber": 1231231231,
+      "movieName": "Interstellar",
+      "seatNumbers": [
+        107
+      ]
+    },
+    {
+      "id": "56f3",
+      "userName": "egrerg",
+      "phoneNumber": 1231231231,
+      "movieName": "Interstellar",
+      "seatNumbers": [
+        106
+      ]
     }
   ]
 }

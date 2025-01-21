@@ -10,11 +10,18 @@ const BookingForm: React.FC = () => {
 
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const phoneNumberPattern = /^[0-9]{10}$/;
     if (!name.trim() || !phoneNumber.trim()) {
+      setErrorMessage("Name and Phone Number cannot be empty.");
+      return;
+    }
+    if (!phoneNumberPattern.test(phoneNumber)) {
+      setErrorMessage("Phone Number must be 10 digits.");
       return;
     }
 
@@ -28,7 +35,16 @@ const BookingForm: React.FC = () => {
       },
     };
 
+    const newUser = {
+      userName: name,
+      phoneNumber: Number(phoneNumber),
+      movieName: selectedMovie.name,
+      seatNumbers: selectedSeats,
+    };
+
     await axios.put(`/movies/${selectedMovie.id}`, updatedMovie);
+    await axios.post("/users", newUser);
+    setErrorMessage(null);
 
     navigate("/moviebooking");
   };
@@ -38,6 +54,7 @@ const BookingForm: React.FC = () => {
   return (
     <div>
       <h2>Booking Confirmation</h2>
+      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <p>
         You have selected {selectedSeats.length} seats for a total amount of{" "}
         {totalAmount} SEK.
@@ -50,7 +67,6 @@ const BookingForm: React.FC = () => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            required
           />
         </div>
         <div>
@@ -60,11 +76,16 @@ const BookingForm: React.FC = () => {
             id="phoneNumber"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
-            required
           />
         </div>
         <button className="btn" type="submit">
           Confirm Booking
+        </button>
+        <button
+          className="btn float-right"
+          onClick={() => navigate("/moviebooking")}
+        >
+          Back to Booking
         </button>
       </form>
     </div>
