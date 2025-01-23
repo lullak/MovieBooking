@@ -5,7 +5,7 @@ import { Movie } from "./Types";
 
 const Admin: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [newMovieName, setNewMovieName] = useState("");
+  const [newMovieName, setNewMovieName] = useState<string>("");
   const [newMoviePrice, setNewMoviePrice] = useState<number | "">("");
   const [editingMovieId, setEditingMovieId] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);

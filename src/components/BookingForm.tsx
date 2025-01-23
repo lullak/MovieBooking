@@ -8,8 +8,8 @@ const BookingForm: React.FC = () => {
   const navigate = useNavigate();
   const { selectedSeats, selectedMovie } = location.state as BookingFormProps;
 
-  const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [name, setName] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
