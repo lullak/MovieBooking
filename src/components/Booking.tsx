@@ -21,18 +21,6 @@ export const Booking: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const fetchSelectedMovie = async () => {
-      if (selectedMovie) {
-        const response = await axios.get<Movie>(`/movies/${selectedMovie.id}`);
-        if (response.data) {
-          setSelectedMovie(response.data);
-        }
-      }
-    };
-    fetchSelectedMovie();
-  }, [selectedMovie?.id]);
-
-  useEffect(() => {
     setSelectedSeats([]);
   }, [selectedMovie]);
 
