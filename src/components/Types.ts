@@ -8,10 +8,6 @@ export interface Movie {
   };
 }
 
-export interface MoviesResponse {
-  movies: Movie[];
-}
-
 export interface BookingFormProps {
   selectedSeats: number[];
   selectedMovie: Movie;
