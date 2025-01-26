@@ -20,7 +20,11 @@ const Admin: React.FC = () => {
   }, []);
 
   const handleAddMovie = async () => {
-    if (newMovieName.trim() && newMoviePrice !== "") {
+    if (
+      newMovieName.trim() &&
+      newMoviePrice !== "" &&
+      Number(newMoviePrice) >= 0
+    ) {
       const newMovie = {
         name: newMovieName,
         ticketPrice: Number(newMoviePrice),
@@ -36,7 +40,9 @@ const Admin: React.FC = () => {
       setNewMoviePrice("");
       setErrorMessage(null);
     } else {
-      setErrorMessage("Movie name and ticket price cannot be empty.");
+      setErrorMessage(
+        "Movie name and ticket price cannot be empty and must be positive."
+      );
     }
   };
 
